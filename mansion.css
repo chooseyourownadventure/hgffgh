@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral+SC:wght@700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  /* --- UPDATED: Deep red gradient background --- */
+  background: linear-gradient(135deg, #6B0F1A 0%, #3A0A0F 100%); /* Crimson to dark burgundy */
+  /* --- UPDATED: Creamy off-white for better contrast --- */
+  color: #FDF5E6; /* Seashell/Linen - a warm off-white */
+  min-height: 100vh;
+  font-family: 'Spectral SC', serif;
+  overflow-x: hidden;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  /* --- UPDATED: New background image - suggestion for a royal/damask texture --- */
+  /* You can replace this URL with a different texture or pattern */
+  background: url('https://www.transparenttextures.com/patterns/royal.png') repeat; /* Example: 'royal' pattern from transparenttextures.com */
+  /* Another option: A subtle fabric texture */
+  /* background: url('https://www.transparenttextures.com/patterns/fabric-scan.png') repeat; */
+  opacity: 0.08; /* Adjusted opacity for subtlety */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 520px; /* Consider increasing slightly if text feels cramped with new styles, e.g., 580px */
+  margin: 60px auto;
+  /* --- UPDATED: Richer, darker background for the container --- */
+  background: rgba(40, 10, 10, 0.9); /* Dark reddish-brown, semi-transparent */
+  border-radius: 12px; /* Slightly less rounded for a more formal feel */
+  /* --- UPDATED: Shadow and gold border --- */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7), inset 0 0 10px rgba(0,0,0,0.2);
+  padding: 38px 32px 26px 32px;
+  border: 3px solid #DAA520; /* Goldenrod - a rich gold */
+}
+
+#title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5em;
+  /* --- UPDATED: Brighter gold and refined shadow --- */
+  color: #FFD700; /* Gold */
+  letter-spacing: 2px;
+  margin-bottom: 0.2em;
+  text-shadow: 2px 2px 6px #000, 0 0 10px #800000; /* Black shadow + subtle deep red glow */
+  text-align: center; /* Centering the title often looks more formal */
+}
+
+#subtitle {
+  font-size: 1.2em;
+  /* --- UPDATED: Muted gold/bronze color --- */
+  color: #B8860B; /* DarkGoldenrod */
+  font-family: 'Spectral SC', serif;
+  margin-top: 0;
+  margin-bottom: 2em;
+  text-shadow: 1px 1px 5px #000;
+  text-align: center; /* Centering the subtitle */
+}
+
+#story {
+  font-size: 1.22em;
+  margin-bottom: 2em;
+  min-height: 120px;
+  /* --- UPDATED: Warmer text color if needed, or keep as body default --- */
+  color: #FAF0E6; /* Linen - slightly warmer than FDF5E6 */
+  letter-spacing: 0.02em;
+  line-height: 1.6; /* Slightly increased line-height for readability */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* Darker shadow for better pop */
+}
+
+#choices {
+  list-style: none;
+  padding: 0;
+}
+
+#choices li {
+  margin-bottom: 16px;
+  text-align: center; /* Center the buttons if desired */
+}
+
+#choices button {
+  font-family: 'Cinzel', serif;
+  font-size: 1.07em;
+  /* --- UPDATED: Gold/Bronze themed buttons --- */
+  background: linear-gradient(145deg, #B8860B, #800000); /* DarkGoldenrod to dark red gradient */
+  color: #FFF8DC; /* Cornsilk - for button text */
+  border: 2px solid #DAA520; /* Goldenrod border */
+  border-radius: 6px; /* Slightly sharper corners */
+  padding: 14px 32px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,215,0,0.3); /* Shadow + subtle gold inset highlight */
+  /* margin-right: 10px; /* Remove if buttons are centered */
+  transition: all 0.2s ease-in-out; /* Smooth transition for multiple properties */
+  outline: none;
+  letter-spacing: 1px;
+  min-width: 200px; /* Give buttons a consistent minimum width */
+}
+
+#choices button:hover {
+  /* --- UPDATED: Brighter gold hover effect --- */
+  background: linear-gradient(145deg, #FFD700, #B22222); /* Gold to Firebrick red */
+  color: #333; /* Darker text on hover for contrast */
+  border-color: #FFDF00; /* Brighter gold border */
+  transform: translateY(-2px) scale(1.02); /* Slight lift and scale */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6), inset 0 1px 1px rgba(255,223,0,0.5);
+}
+
+#end {
+  margin-top: 2.5em;
+  font-size: 1.35em;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  /* --- UPDATED: Gold color and shadow for end text --- */
+  color: #FFD700; /* Gold */
+  text-shadow: 0 0 12px #DAA520, 0 0 6px #FFD700; /* Gold glow */
+}
+
+/* Keep responsive adjustments, they are generally good */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px; /* Adjusted padding for smaller screens */
+    margin: 28px 4vw;
+    border-width: 2px; /* Slightly thinner border on mobile */
+  }
+  #title { font-size: 2em; } /* Adjusted title size */
+  #subtitle { font-size: 1.1em; }
+  #story { font-size: 1.05em; min-height: 90px; }
+  #end { font-size: 1.2em; }
+  #choices button {
+    font-size: 1em;
+    padding: 12px 20px;
+    min-width: 180px;
+  }
+}
